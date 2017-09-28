@@ -6,17 +6,21 @@
 }
 
 .page {
-  margin: 8px;
+  margin: 8px 16px;
 }
 
-.diver {
+.l-container {
+  margin: 16px 8px;
+}
+
+.sad {
+  background-image: url('../svg/sad.svg');
   width: 50px;
   height: 50px;
 }
 
-.thief {
-  width: 80px;
-  height: 80px;
+.blue {
+  fill: #0cc;
 }
 
 .cc {
