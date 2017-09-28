@@ -16,7 +16,7 @@
         <h3>画像としてHTMLに埋め込む</h3>
         <section class="l-container">
           <h4>img要素としてHTMLに埋め込む</h4>
-          <img src="svg/sad.svg" alt="">
+          <img src="img/sad.svg" alt="">
         </section>
         <section class="l-container">
           <h4>CSSに埋め込む</h4>
@@ -33,7 +33,9 @@
           <h4>use要素使用（svg sprite）</h4>
           <svg role="img">
             <title>sad</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad">
+              <div class="ic-sad"></div>
+            </use>
           </svg>
           <svg role="img">
             <title>neutral</title>

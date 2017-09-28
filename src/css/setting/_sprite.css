@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+:root {
+  --neutral: {
+    background-image: url(../img/sprite.png);
+    background-position: 0px 0px;
+    width: 128px;
+    height: 128px;
+  };
+  --sad: {
+    background-image: url(../img/sprite.png);
+    background-position: -132px 0px;
+    width: 128px;
+    height: 128px;
+  };
+}

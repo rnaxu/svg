@@ -6,7 +6,4 @@ deployment:
   deploy:
     branch: master
     commands:
-      - git config --global user.email mayumiii.seki@gmail.com
-      - git config --global user.name rnaxu
-      - git checkout -b gh-pages origin/master
-      - git push origin gh-pages
+     - ./build.sh
