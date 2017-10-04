@@ -4,67 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <title>SVGのてすと</title>
 </head>
 <body>
   <div class="page">
-    <h1>SVG</h1>
+    <h1 class="headline">SVGのてすと</h1>
 
-    <section class="l-container">
-      <h2>埋め込み方法</h2>
-      <section class="l-container">
-        <h3>画像としてHTMLに埋め込む</h3>
-        <section class="l-container">
-          <h4>img要素としてHTMLに埋め込む</h4>
-          <img src="img/sad.svg" alt="">
+    <ul class="list">
+      <li class="list__item">
+        <section>
+          <h2>img要素としてHTMLに埋め込む</h2>
+          <img src="img/sad.svg" alt="sad">
         </section>
-        <section class="l-container">
-          <h4>CSSに埋め込む</h4>
+      </li>
+      <li class="list__item">
+        <section>
+          <h2>CSSで埋め込む</h2>
           <div class="sad"></div>
         </section>
-      </section>
-      <section class="l-container">
-        <h3>要素として埋め込む</h3>
-        <section class="l-container">
-          <h4>ベタ書き</h4>
+      </li>
+      <li class="list__item">
+        <section>
+          <h2>svg要素ベタ書き</h2>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.667 426.667" enable-background="new 0 0 426.667 426.667"><path d="M288 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM138.667 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM213.333 256c-49.707 0-91.84 31.04-108.907 74.667h217.814c-17.067-43.627-59.2-74.667-108.907-74.667zM213.227 0c-117.867 0-213.227 95.467-213.227 213.333s95.36 213.333 213.227 213.333 213.44-95.467 213.44-213.333-95.574-213.333-213.44-213.333zm.106 384c-94.293 0-170.667-76.373-170.667-170.667s76.374-170.666 170.667-170.666 170.667 76.373 170.667 170.666-76.373 170.667-170.667 170.667z"/></svg>
         </section>
-        <section class="l-container">
-          <h4>use要素使用（svg sprite）</h4>
+      </li>
+      <li class="list__item">
+        <section>
+          <h2>use要素使用（svg sprite）</h2>
           <svg role="img">
             <title>sad</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad">
-              <div class="ic-sad"></div>
-            </use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad"></use>
           </svg>
-          <svg role="img">
+          <svg role="img" class="fixed">
             <title>neutral</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#neutral"></use>
           </svg>
         </section>
-      </section>
-    </section>
-
-    <section class="l-container">
-      <h2>色</h2>
-      <p>色の変更は「要素として埋め込む」方法を使っている時のみ可能。fill属性かcssのfillプロパティで指定できる</p>
-      <section class="l-container">
-        <h3>色指定なし</h3>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.667 426.667" enable-background="new 0 0 426.667 426.667"><path d="M288 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM138.667 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM213.333 256c-49.707 0-91.84 31.04-108.907 74.667h217.814c-17.067-43.627-59.2-74.667-108.907-74.667zM213.227 0c-117.867 0-213.227 95.467-213.227 213.333s95.36 213.333 213.227 213.333 213.44-95.467 213.44-213.333-95.574-213.333-213.44-213.333zm.106 384c-94.293 0-170.667-76.373-170.667-170.667s76.374-170.666 170.667-170.666 170.667 76.373 170.667 170.666-76.373 170.667-170.667 170.667z"/></svg>
-        <svg role="img">
-          <title>sad</title>
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad"></use>
-        </svg>
-      </section>
-      <section class="l-container">
-        <h3>色指定あり</h3>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.667 426.667" enable-background="new 0 0 426.667 426.667" class="blue"><path d="M288 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM138.667 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM213.333 256c-49.707 0-91.84 31.04-108.907 74.667h217.814c-17.067-43.627-59.2-74.667-108.907-74.667zM213.227 0c-117.867 0-213.227 95.467-213.227 213.333s95.36 213.333 213.227 213.333 213.44-95.467 213.44-213.333-95.574-213.333-213.44-213.333zm.106 384c-94.293 0-170.667-76.373-170.667-170.667s76.374-170.666 170.667-170.666 170.667 76.373 170.667 170.666-76.373 170.667-170.667 170.667z"/></svg>
-        <svg role="img" class="blue">
-          <title>sad</title>
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad"></use>
-        </svg>
-      </section>
-    </section>
+      </li>
+      <li class="list__item">
+        <section>
+          <h2>色指定</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.667 426.667" enable-background="new 0 0 426.667 426.667" class="blue"><path d="M288 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM138.667 192c17.707 0 32-14.293 32-32s-14.293-32-32-32-32 14.293-32 32 14.293 32 32 32zM213.333 256c-49.707 0-91.84 31.04-108.907 74.667h217.814c-17.067-43.627-59.2-74.667-108.907-74.667zM213.227 0c-117.867 0-213.227 95.467-213.227 213.333s95.36 213.333 213.227 213.333 213.44-95.467 213.44-213.333-95.574-213.333-213.44-213.333zm.106 384c-94.293 0-170.667-76.373-170.667-170.667s76.374-170.666 170.667-170.666 170.667 76.373 170.667 170.666-76.373 170.667-170.667 170.667z"/></svg>
+          <svg role="img" class="blue">
+            <title>sad</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#sad"></use>
+          </svg>
+        </section>
+      </li>
+    </ul>
 
     <footer>
       <div class="cc">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
