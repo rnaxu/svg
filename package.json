@@ -12,9 +12,11 @@
     "watch:img": "npm run copy:img && watch 'npm run copy:img' src/img/",
     "build:css": "postcss src/css/style.css -d dist/css/ -c postcss.config.js",
     "watch:css": "postcss src/css/style.css -d dist/css/ -c postcss.config.js -w",
+    "build:js": "mkdir -p ./dist/js && browserify src/js/script.js -o dist/js/script.js -t [ babelify --presets [ es2015 ] ]",
+    "watch:js": "npm run build:js && watch 'npm run build:js' src/js/",
     "server": "browser-sync start --server --serveStatic './dist' --files 'dist/**/*'",
-    "dev": "npm run watch:html & npm run watch:css & npm run watch:img & npm run server",
-    "build": "npm run copy:html & npm run build:css & npm run copy:img",
+    "dev": "npm run watch:html & npm run watch:css & npm run watch:js & npm run watch:img & npm run server",
+    "build": "npm run copy:html & npm run build:css & npm run build:js & npm run copy:img",
     "clean": "rm -rf dist",
     "test": "echo no test"
   },
@@ -29,7 +31,10 @@
   },
   "homepage": "https://github.com/rnaxu/svg#readme",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
     "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
     "cssnano": "^3.10.0",
     "postcss-apply": "^0.8.0",
     "postcss-cli": "^4.1.1",
@@ -38,6 +43,7 @@
     "postcss-nested": "^2.1.2",
     "spritesmith-cli": "^1.1.2",
     "svg-sprite": "^1.3.7",
+    "svg4everybody": "^2.1.9",
     "watch": "^1.0.2"
   }
 }
