@@ -3,15 +3,8 @@
 .headline {
   font-weight: bold;
   font-size: 22px;
-  margin: 8px;
+  margin: 16px 8px;
 }
-
-.list {
-  &__item {
-    margin: 24px 16px;
-  }
-}
-
 
 .sad {
   background-image: url('../img/sad.svg');
@@ -32,4 +25,5 @@
   font-size: 10px;
   color: #333;
   text-align: center;
+  margin: 16px 8px;
 }

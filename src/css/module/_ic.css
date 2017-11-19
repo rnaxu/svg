@@ -1,7 +1,15 @@
 @charset 'utf-8';
 
-.ic {
+/* .ic {
   &--neutral {
     @apply --neutral;
+  }
+} */
+
+.ic {
+  fill: #ccc;
+
+  &.is-active {
+    fill: rgb(0, 188, 212);
   }
 }

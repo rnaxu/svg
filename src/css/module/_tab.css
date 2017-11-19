@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.tab {
+  display: flex;
+  list-style-type: none;
+}
+
+.tab__item {
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.tab__item + .tab__item {
+  border-left: solid 1px #ccc;
+}

@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.list {
+  &__item {
+    margin: 24px 8px;
+  }
+
+  &__head {
+    margin-bottom: 8px;
+  }
+}

@@ -1,8 +1,10 @@
 @charset 'utf-8';
 
-@import 'setting/_sprite.css';
+@import 'setting/_sprite';
 
-@import 'base/_reset.css';
+@import 'base/_reset';
 
-@import 'module/_page.css';
-/* @import 'module/_ic.css'; */
+@import 'module/_page';
+@import 'module/_ic';
+@import 'module/_list';
+@import 'module/_tab';
