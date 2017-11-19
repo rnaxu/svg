@@ -108,12 +108,44 @@
 },{}],2:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var tabItems = document.getElementsByClassName('js-tab-trigger');
+
+  function changeTab(e) {
+    e.preventDefault();
+
+    // 一旦全部非活性に
+    Array.prototype.forEach.call(tabItems, function (el) {
+      el.classList.remove('is-active');
+    });
+
+    // 選択されたタブだけ活性に
+    e.currentTarget.classList.add('is-active');
+  }
+
+  Array.prototype.forEach.call(tabItems, function (el) {
+    el.addEventListener('click', changeTab);
+  });
+};
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
 var _svg4everybody = require('svg4everybody');
 
 var _svg4everybody2 = _interopRequireDefault(_svg4everybody);
 
+var _changeTab = require('./module/changeTab');
+
+var _changeTab2 = _interopRequireDefault(_changeTab);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _svg4everybody2.default)();
+(0, _changeTab2.default)();
 
-},{"svg4everybody":1}]},{},[2]);
+},{"./module/changeTab":2,"svg4everybody":1}]},{},[3]);
