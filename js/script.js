@@ -120,6 +120,8 @@ exports.default = function () {
 
     // 一旦全部非活性に
     Array.prototype.forEach.call(tabItems, function (el) {
+      console.log(el);
+      console.log(el.classList);
       el.classList.remove('is-active');
     });
 
