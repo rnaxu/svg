@@ -115,18 +115,34 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   var tabItems = document.getElementsByClassName('js-tab-trigger');
 
+  function addToClassList(el, className) {
+    var re = new RegExp('(\\s|\\b)' + className + '\\b', 'g');
+    var originClass = el.getAttribute('class').replace(re, '');
+    var newClass = originClass + ' ' + className;
+
+    el.setAttribute('class', newClass);
+  }
+
+  function removeToClassList(el, className) {
+    var re = new RegExp('(\\s|\\b)' + className + '\\b', 'g');
+    var originClass = el.getAttribute('class');
+    var newClass = originClass.replace(re, '');
+
+    el.setAttribute('class', newClass);
+  }
+
   function changeTab(e) {
     e.preventDefault();
 
     // 一旦全部非活性に
     Array.prototype.forEach.call(tabItems, function (el) {
-      console.log(el);
-      console.log(el.classList);
-      el.classList.remove('is-active');
+      // el.classList.remove('is-active');
+      removeToClassList(el, 'is-active');
     });
 
     // 選択されたタブだけ活性に
-    e.currentTarget.classList.add('is-active');
+    // e.currentTarget.classList.add('is-active');
+    addToClassList(e.currentTarget, 'is-active');
   }
 
   Array.prototype.forEach.call(tabItems, function (el) {
